@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Ulang Tahun</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #385dd6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card {
+            background-color: #ffffffb7;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 3rem;
+            animation: rainbow 2s infinite;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff6f61; }
+            25% { color: #ffb961; }
+            50% { color: #61ff9b; }
+            75% { color: #61aaff; }
+            100% { color: #ff6f61; }
+        }
+
+        .balloons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .balloons img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .signature {
+            font-size: 1.2rem;
+            color: #888;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6f61;
+            opacity: 0.9;
+            animation: fall 5s linear infinite;
+        }
+
+        .confetti-piece:nth-child(even) {
+            background-color: #61aaff;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Selamat Ulang Tahun!</h1>
+        <p>Semoga hari istimewamu dipenuhi dengan kebahagiaan, tawa, dan keajaiban. Wishing you all the best on your special day!</p>
+        
+        <div class="balloons">
+            <img src="foto1.jpeg" alt="Balon 1">
+            <img src="foto2.jpeg" alt="Balon 2">
+            <img src="foto3.jpeg" alt="Balon 3">
+        </div>
+        
+        <p class="signature">Salam hangat, <br> [Namamu]</p>
+    </div>
+
+    <div class="confetti">
+        <div class="confetti-piece" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="confetti-piece" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 30%; animation-delay: 0.5s;"></div>
+        <div class="confetti-piece" style="left: 40%; animation-delay: 1.5s;"></div>
+        <div class="confetti-piece" style="left: 50%; animation-delay: 2s;"></div>
+        <div class="confetti-piece" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 70%; animation-delay: 2.5s;"></div>
+        <div class="confetti-piece" style="left: 80%; animation-delay: 1s;"></div>
+        <div class="confetti-piece" style="left: 90%; animation-delay: 3s;"></div>
+    </div>
+
+</body>
+</html>
